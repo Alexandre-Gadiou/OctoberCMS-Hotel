@@ -23,20 +23,20 @@ class Plugin extends PluginBase
     {
         return [
             'algad.hotel.manage_hotel' => [
-                'tab' => 'algad.hotel::lang.hotel.tab',
-                'label' => 'algad.hotel::lang.hotel.manage_hotel'
+                'tab' => 'algad.hotel::lang.permissions.tab',
+                'label' => 'algad.hotel::lang.permissions.manage_hotel'
             ],
-            'algad.hotel.access_rooms' => [
-                'tab' => 'algad.hotel::lang.hotel.tab',
-                'label' => 'algad.hotel::lang.hotel.access_rooms'
+            'algad.hotel.manage_rooms' => [
+                'tab' => 'algad.hotel::lang.permissions.tab',
+                'label' => 'algad.hotel::lang.permissions.manage_rooms'
             ],
-            'algad.hotel.access_customers' => [
-                'tab' => 'algad.hotel::lang.hotel.tab',
-                'label' => 'algad.hotel::lang.hotel.access_customers'
+            'algad.hotel.manage_customers' => [
+                'tab' => 'algad.hotel::lang.permissions.tab',
+                'label' => 'algad.hotel::lang.permissions.manage_customers'
             ],
-            'algad.hotel.access_bookings' => [
-                'tab' => 'algad.hotel::lang.hotel.tab',
-                'label' => 'algad.hotel::lang.hotel.access_bookings'
+            'algad.hotel.manage_bookings' => [
+                'tab' => 'algad.hotel::lang.permissions.tab',
+                'label' => 'algad.hotel::lang.permissions.manage_bookings'
             ]
         ];
     }
@@ -48,26 +48,26 @@ class Plugin extends PluginBase
                 'label' => 'algad.hotel::lang.backendMenu.hotel',
                 'url' => Backend::url('algad/hotel/reservations'),
                 'icon' => 'icon-home',
-                'permissions' => ['algad.photography.manage_hotel'],
+                'permissions' => ['algad.hotel.manage_hotel'],
                 'order' => 100,
                 'sideMenu' => [
                     'rooms' => [
                         'label' => 'algad.hotel::lang.backendMenu.rooms',
                         'icon' => 'icon-hotel',
                         'url' => Backend::url('algad/hotel/rooms'),
-                        'permissions' => ['algad.hotel.access_rooms']
+                        'permissions' => ['algad.hotel.manage_rooms']
                     ],
                     'customers' => [
                         'label' => 'algad.hotel::lang.backendMenu.customers',
                         'icon' => 'icon-users',
                         'url' => Backend::url('algad/hotel/customers'),
-                        'permissions' => ['algad.hotel.access_customers']
+                        'permissions' => ['algad.hotel.manage_customers']
                     ],
                     'bookings' => [
                         'label' => 'algad.hotel::lang.backendMenu.bookings',
                         'icon' => 'icon-book',
                         'url' => Backend::url('algad/hotel/bookings'),
-                        'permissions' => ['algad.hotel.access_bookings']
+                        'permissions' => ['algad.hotel.manage_bookings']
                     ]
                 ]
             ]
