@@ -23,6 +23,13 @@ return [
         'is_available' => 'Available',
         'list_delete_confirm' => 'Do you really want to delete this room ?'
     ],
+    'booking' => [
+        'date_in' => 'Arrival',
+        'date_out' => 'Departure',
+        'created_at' => 'Created at',
+        'updated_at' => 'Updated at',
+        'list_delete_confirm' => 'Do you really want to delete this booking ?'
+    ],
     'backendMenu' => [
         'hotel' => 'Hotel',
         'rooms' => 'Rooms',
@@ -40,6 +47,7 @@ return [
         'cancel' => 'Cancel',
         'create' => 'Create',
         'save' => 'Save',
-        'newRoom' => 'New room'
+        'newRoom' => 'New room',
+        'newBooking' => 'New booking'
     ]
 ];
