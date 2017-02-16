@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: algad.hotel::lang.bill.id
+    amount:
+        label: algad.hotel::lang.bill.amount
+    currency:
+        label: algad.hotel::lang.bill.currency
+    is_paid:
+        label: algad.hotel::lang.bill.is_paid
+    created_at:
+        label: algad.hotel::lang.bill.created_at
+        type: switch

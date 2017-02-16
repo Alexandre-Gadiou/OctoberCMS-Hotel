@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: algad.hotel::lang.bill.id
+        searchable: true
+    amount:
+        label: algad.hotel::lang.bill.amount
+        searchable: true
+    currency:
+        label: algad.hotel::lang.bill.currency
+        searchable: true
+    is_paid:
+        label: algad.hotel::lang.bill.is_paid
+        searchable: true
+    created_at:
+        label: algad.hotel::lang.bill.created_at
+        searchable: true
