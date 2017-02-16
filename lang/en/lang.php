@@ -34,14 +34,16 @@ return [
         'hotel' => 'Hotel',
         'rooms' => 'Rooms',
         'customers' => 'Customers',
-        'bookings' => 'Bookings'
+        'bookings' => 'Bookings',
+        'bills' => 'Bills'
     ],
     'permissions' => [
         'tab' => 'Hotel',
         'manage_hotel' => 'Manage hotel',
         'manage_rooms' => 'Manage rooms',
         'manage_customers' => 'Manage customers',
-        'manage_bookings' => 'Manage bookings'
+        'manage_bookings' => 'Manage bookings',
+        'manage_bills' => 'Manage bills',
     ],
     'button' => [
         'cancel' => 'Cancel',
