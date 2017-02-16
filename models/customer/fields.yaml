@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: algad.hotel::lang.customer.firstname
+    surname:
+        label: algad.hotel::lang.customer.lastname
+    email:
+        label: algad.hotel::lang.customer.email
+    password:
+        label: algad.hotel::lang.customer.password
+        type: password
+    password_confirmation:
+        label: algad.hotel::lang.customer.password_confirmation
+        type: password

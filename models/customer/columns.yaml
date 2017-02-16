@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: algad.hotel::lang.customer.firstname
+        searchable: true
+    surname:
+        label: algad.hotel::lang.customer.lastname
+        searchable: true
+    email:
+        label: algad.hotel::lang.customer.email
+        searchable: true
