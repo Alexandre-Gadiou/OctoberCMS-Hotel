@@ -30,4 +30,12 @@ class Booking extends Model
      */
     public $table = 'algad_hotel_bookings';
 
+    /*
+     * Relations
+     */
+    public $belongsTo = [
+        'user' => ['Backend\Models\User'],
+        'room' => ['Algad\Hotel\Models\Room']
+    ];
+
 }

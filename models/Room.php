@@ -1,4 +1,6 @@
-<?php namespace Algad\Hotel\Models;
+<?php
+
+namespace Algad\Hotel\Models;
 
 use Model;
 
@@ -7,12 +9,14 @@ use Model;
  */
 class Room extends Model
 {
+
     use \October\Rain\Database\Traits\Validation;
-    
+
     /*
      * Disable timestamps by default.
      * Remove this line if timestamps are defined in the database table.
      */
+
     public $timestamps = false;
 
     /*
@@ -25,4 +29,8 @@ class Room extends Model
      * @var string The database table used by the model.
      */
     public $table = 'algad_hotel_rooms';
+    public $hasMany = [
+        'booking' => 'Algad\Hotel\Models\Booking'
+    ];
+
 }
