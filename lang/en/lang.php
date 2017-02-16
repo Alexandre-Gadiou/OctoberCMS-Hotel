@@ -1,5 +1,6 @@
-<?php return [
+<?php
 
+return [
     'plugin' => [
         'name' => 'Hotel',
         'description' => 'room, customer, bill management system'
@@ -9,12 +10,35 @@
         'description' => 'Login'
     ],
     'registrationForm' => [
-    	'name' => 'Registration form',
-    	'description' => 'Inscription'
+        'name' => 'Registration form',
+        'description' => 'Inscription'
     ],
     'updateAccountForm' => [
         'name' => 'Update account form',
         'description' => 'Update profile'
+    ],
+    'room' => [
+        'title' => 'Title',
+        'number' => 'Number',
+        'is_available' => 'Available'
+    ],
+    'backendMenu' => [
+        'hotel' => 'Hotel',
+        'rooms' => 'Rooms',
+        'customers' => 'Customers',
+        'bookings' => 'Bookings'
+    ],
+    'permissions' => [
+        'tab' => 'Hotel',
+        'manage_hotel' => 'Manage hotel',
+        'manage_rooms' => 'Manage rooms',
+        'manage_customers' => 'Manage customers',
+        'manage_bookings' => 'Manage bookings'
+    ],
+    'button' => [
+        'cancel' => 'Cancel',
+        'create' => 'Create',
+        'save' => 'Save',
+        'newRoom' => 'New room'
     ]
-    
 ];
