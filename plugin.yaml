@@ -1,0 +1,25 @@
+plugin:
+    name: 'algad.hotel::lang.plugin.name'
+    description: 'algad.hotel::lang.plugin.description'
+    author: Algad
+    icon: oc-icon-home
+    homepage: ''
+navigation:
+    hotel:
+        label: 'algad.hotel::lang.plugin.name'
+        url: hotel
+        icon: icon-home
+        permissions: {  }
+        sideMenu:
+            Rooms:
+                label: Rooms
+                url: hotel/rooms
+                icon: icon-bed
+            customers:
+                label: Customers
+                url: hotel/customers
+                icon: icon-users
+            reservations:
+                label: Reservations
+                url: hotel/reservations
+                icon: icon-folder
