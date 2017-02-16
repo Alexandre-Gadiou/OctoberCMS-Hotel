@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+    - create_table_algad_hotel_rooms.php
+    - extends_table_users.php
+
