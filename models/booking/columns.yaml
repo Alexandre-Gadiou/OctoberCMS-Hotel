@@ -9,3 +9,9 @@ columns:
     date_out:
         label: algad.hotel::lang.booking.date_out
         searchable: true
+    created_at:
+        label: algad.hotel::lang.booking.created_at
+        searchable: true
+    updated_at:
+        label: algad.hotel::lang.booking.updated_at
+        searchable: true
