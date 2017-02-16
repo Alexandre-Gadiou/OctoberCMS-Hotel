@@ -5,5 +5,11 @@
 fields:
     date_in:
         label: algad.hotel::lang.booking.date_in
+        type: datepicker
+        mode: date
+        span: left
     date_out:
         label: algad.hotel::lang.booking.date_out
+        type: datepicker
+        mode: date
+        span: right
