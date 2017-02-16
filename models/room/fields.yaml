@@ -1,0 +1,12 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: algad.hotel::lang.room.title
+    number:
+        label: algad.hotel::lang.room.number
+    is_available:
+        label: algad.hotel::lang.room.is_available
+        type: switch

@@ -1,0 +1,11 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: algad.hotel::lang.room.title
+        searchable: true
+    number:
+        label: algad.hotel::lang.room.number
+        searchable: true
