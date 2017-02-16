@@ -37,6 +37,10 @@ class Plugin extends PluginBase
             'algad.hotel.manage_bookings' => [
                 'tab' => 'algad.hotel::lang.permissions.tab',
                 'label' => 'algad.hotel::lang.permissions.manage_bookings'
+            ],
+            'algad.hotel.manage_bills' => [
+                'tab' => 'algad.hotel::lang.permissions.tab',
+                'label' => 'algad.hotel::lang.permissions.manage_bills'
             ]
         ];
     }
@@ -68,6 +72,12 @@ class Plugin extends PluginBase
                         'icon' => 'icon-book',
                         'url' => Backend::url('algad/hotel/bookings'),
                         'permissions' => ['algad.hotel.manage_bookings']
+                    ],
+                    'bills' => [
+                        'label' => 'algad.hotel::lang.backendMenu.bills',
+                        'icon' => 'icon-bank',
+                        'url' => Backend::url('algad/hotel/bills'),
+                        'permissions' => ['algad.hotel.manage_bills']
                     ]
                 ]
             ]
