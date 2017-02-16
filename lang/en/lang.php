@@ -20,7 +20,8 @@ return [
     'room' => [
         'title' => 'Title',
         'number' => 'Number',
-        'is_available' => 'Available'
+        'is_available' => 'Available',
+        'list_delete_confirm' => 'Do you really want to delete this room ?'
     ],
     'backendMenu' => [
         'hotel' => 'Hotel',
