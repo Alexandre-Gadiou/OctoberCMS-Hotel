@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Booking
+
+# Model Form Field configuration
+form: $/algad/hotel/models/booking/fields.yaml
+
+# Model Class name
+modelClass: Algad\Hotel\Models\Booking
+
+# Default redirect location
+defaultRedirect: algad/hotel/bookings
+
+# Create page
+create:
+    title: Create Booking
+    redirect: algad/hotel/bookings/update/:id
+    redirectClose: algad/hotel/bookings
+
+# Update page
+update:
+    title: Edit Booking
+    redirect: algad/hotel/bookings
+    redirectClose: algad/hotel/bookings
+
+# Preview page
+preview:
+    title: Preview Booking
