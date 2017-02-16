@@ -46,7 +46,7 @@ class Plugin extends PluginBase
         return [
             'hotel' => [
                 'label' => 'algad.hotel::lang.backendMenu.hotel',
-                'url' => Backend::url('algad/hotel/reservations'),
+                'url' => Backend::url('algad/hotel/bookings'),
                 'icon' => 'icon-home',
                 'permissions' => ['algad.hotel.manage_hotel'],
                 'order' => 100,
