@@ -1,0 +1,58 @@
+<div class="algad-hotel form update-account-form well">
+
+    {{ form_open({ request: 'onUpdate', id:'contact-form',class:'form-horizontal',role:'form', model: user}) }}
+
+    <div class="form-group ">
+        <label for="name" class="col-sm-4 col-md-4 control-label">First Name</label>
+        <div class="col-sm-8 col-md-8">
+            <input class="form-control" required="required" name="name" type="text" value="{{ form_value('name') }}">
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="surname" class="col-sm-4 col-md-4 control-label">Last Name</label>
+        <div class="col-sm-8 col-md-8">
+            <input class="form-control" required="required" name="surname" type="text" value="{{ form_value('surname') }}">
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="dateOfBirth" class="col-sm-4 col-md-4 control-label">Date of birth</label>
+        <div class="col-sm-8 col-md-8">
+            <div class="input-group date">
+                <input class="form-control" required="required" name="dateOfBirth" type="date" value="{{ form_value('dateOfBirth')|date('Y-m-d') }}">
+                <span class="input-group-addon">
+                    <span class="fa fa-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="email" class="col-sm-4 col-md-4 control-label">Email</label>
+        <div class="col-sm-8 col-md-8">
+            <input class="form-control" autocapitalize="none" required="required" name="email" type="email" value="{{ form_value('email') }}">
+        </div>        
+    </div>
+
+    <div class="form-group ">
+        <label for="password" class="col-sm-4 col-md-4 control-label">New Password</label>
+        <div class="col-sm-8 col-md-8">
+            <input class="form-control" name="password" type="password">
+        </div>        
+    </div>
+
+    <div class="form-group ">
+        <label for="password_confirmation" class="col-sm-4 col-md-4 control-label">Confirm New Password</label>
+        <div class="col-sm-8 col-md-8">
+            <input class="form-control" name="password_confirmation" type="password">
+        </div>        
+    </div>
+
+    <div class="form-group button-bar">
+        <div class="col-xs-12">
+            <button type="reset" class="btn btn-default">Reset</button>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </div>
+
+    {{ form_close() }}   
+
+</div>
