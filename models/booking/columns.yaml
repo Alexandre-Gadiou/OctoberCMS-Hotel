@@ -1,0 +1,11 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    date_in:
+        label: algad.hotel::lang.booking.date_in
+        searchable: true
+    date_out:
+        label: algad.hotel::lang.booking.date_out
+        searchable: true

@@ -1,0 +1,9 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    date_in:
+        label: algad.hotel::lang.booking.date_in
+    date_out:
+        label: algad.hotel::lang.booking.date_out
