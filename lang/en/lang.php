@@ -30,6 +30,14 @@ return [
         'updated_at' => 'Updated at',
         'list_delete_confirm' => 'Do you really want to delete this booking ?'
     ],
+    'customer' => [
+        'firstname' => 'First Name',
+        'lastname' => 'Last Name',
+        'email' => 'Email',
+        'password' => 'Password',
+        'password_confirmation' => 'Confirm password',
+        'list_delete_confirm' => 'Do you really want to delete this customer ?'
+    ],
     'backendMenu' => [
         'hotel' => 'Hotel',
         'rooms' => 'Rooms',
@@ -50,6 +58,7 @@ return [
         'create' => 'Create',
         'save' => 'Save',
         'newRoom' => 'New room',
-        'newBooking' => 'New booking'
+        'newBooking' => 'New booking',
+        'newCustomer' => 'New customer'
     ]
 ];
