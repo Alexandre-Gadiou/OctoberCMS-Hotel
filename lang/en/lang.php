@@ -17,6 +17,14 @@ return [
         'name' => 'Update account form',
         'description' => 'Update profile'
     ],
+    'customer' => [
+        'firstname' => 'First Name',
+        'lastname' => 'Last Name',
+        'email' => 'Email',
+        'password' => 'Password',
+        'password_confirmation' => 'Confirm password',
+        'list_delete_confirm' => 'Do you really want to delete this customer ?'
+    ],
     'room' => [
         'title' => 'Title',
         'number' => 'Number',
@@ -32,13 +40,13 @@ return [
         'updated_at' => 'Updated at',
         'list_delete_confirm' => 'Do you really want to delete this booking ?'
     ],
-    'customer' => [
-        'firstname' => 'First Name',
-        'lastname' => 'Last Name',
-        'email' => 'Email',
-        'password' => 'Password',
-        'password_confirmation' => 'Confirm password',
-        'list_delete_confirm' => 'Do you really want to delete this customer ?'
+    'bill' => [
+        'id' => 'ID',
+        'amount' => 'Amount',
+        'currency' => 'Currency',
+        'is_paid' => 'Paid',
+        'created_at' => 'Created at',
+        'list_delete_confirm' => 'Do you really want to delete this bill ?'
     ],
     'backendMenu' => [
         'hotel' => 'Hotel',
@@ -61,6 +69,7 @@ return [
         'save' => 'Save',
         'newRoom' => 'New room',
         'newBooking' => 'New booking',
-        'newCustomer' => 'New customer'
+        'newCustomer' => 'New customer',
+        'newBill' => 'New Bill'
     ]
 ];
