@@ -4,3 +4,4 @@
     - create_table_algad_hotel_rooms.php
     - create_table_algad_hotel_bookings.php
     - create_table_algad_hotel_bills.php
+    - create_table_algad_hotel_bookings_rooms.php

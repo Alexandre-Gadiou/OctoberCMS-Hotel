@@ -1,15 +1,21 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
-
 fields:
     date_in:
-        label: algad.hotel::lang.booking.date_in
+        label: 'algad.hotel::lang.booking.date_in'
         type: datepicker
         mode: date
         span: left
     date_out:
-        label: algad.hotel::lang.booking.date_out
+        label: 'algad.hotel::lang.booking.date_out'
         type: datepicker
         mode: date
         span: right
+    user:
+        label: 'algad.hotel::lang.booking.user'
+        nameFrom: email
+        span: right
+        type: relation
+    rooms:
+        label: 'algad.hotel::lang.booking.rooms'
+        nameFrom: number
+        span: left
+        type: relation
