@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Bill
+
+# Model Form Field configuration
+form: $/algad/hotel/models/bill/fields.yaml
+
+# Model Class name
+modelClass: Algad\Hotel\Models\Bill
+
+# Default redirect location
+defaultRedirect: algad/hotel/bills
+
+# Create page
+create:
+    title: Create Bill
+    redirect: algad/hotel/bills/update/:id
+    redirectClose: algad/hotel/bills
+
+# Update page
+update:
+    title: Edit Bill
+    redirect: algad/hotel/bills
+    redirectClose: algad/hotel/bills
+
+# Preview page
+preview:
+    title: Preview Bill
