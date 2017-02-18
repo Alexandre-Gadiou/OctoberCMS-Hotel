@@ -3,14 +3,12 @@
 # ===================================
 
 fields:
-    id:
-        label: algad.hotel::lang.bill.id
     amount:
         label: algad.hotel::lang.bill.amount
+        span: left
     currency:
         label: algad.hotel::lang.bill.currency
+        span: right
     is_paid:
         label: algad.hotel::lang.bill.is_paid
-    created_at:
-        label: algad.hotel::lang.bill.created_at
         type: switch
