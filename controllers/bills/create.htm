@@ -9,8 +9,39 @@
 
 <?= Form::open(['class' => 'layout']) ?>
 
-<div class="layout-row">
-    <?= $this->formRender() ?>
+<div class="layout-row">    
+    <div data-control="formwidget" data-refresh-handler="form::onRefresh" class="form-widget form-elements layout" role="form" id="Form" data-disposable="">
+        <div class="layout-row">
+            <div class="form-group  widget-field span-full   " data-field-name="booking" id="Form-field-Bill-booking-group">
+                <label for="Form-field-Bill-booking">Booking n°</label>
+                <input readonly type="text" name="Bill[booking]" id="Form-field-Bill-booking" value="<?= $_GET['bookingID']?>" placeholder="" class="form-control" autocomplete="off" maxlength="255">
+            </div>    
+            <div class="form-group  text-field span-left   " data-field-name="amount" id="Form-field-Bill-amount-group">
+                <label for="Form-field-Bill-amount">Amount</label>
+                <!-- Text -->
+                <input type="text" name="Bill[amount]" id="Form-field-Bill-amount" value="" placeholder="" class="form-control" autocomplete="off" maxlength="255">
+            </div>    
+            <div class="form-group  text-field span-right   " data-field-name="currency" id="Form-field-Bill-currency-group">
+                <label for="Form-field-Bill-currency">Currency </label>
+                <!-- Text -->
+                <input type="text" name="Bill[currency]" id="Form-field-Bill-currency" value="" placeholder="" class="form-control" autocomplete="off" maxlength="255">
+            </div>   
+            <div class="form-group  switch-field span-full   " data-field-name="is_paid" id="Form-field-Bill-is_paid-group">
+                <!-- Switch -->
+                <div class="field-switch">
+                    <label>Paid</label>
+                </div>
+
+                <input type="hidden" name="Bill[is_paid]" value="0">
+
+                <label class="custom-switch">
+                    <input type="checkbox" id="Form-field-Bill-is_paid" name="Bill[is_paid]" value="1">
+                    <span><span>On</span><span>Off</span></span>
+                    <a class="slide-button"></a>
+                </label>
+            </div>   
+        </div>
+    </div>
 </div>
 
 <div class="form-buttons">
