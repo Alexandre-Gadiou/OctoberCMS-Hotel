@@ -70,6 +70,6 @@ return [
         'newRoom' => 'New room',
         'newBooking' => 'New booking',
         'newCustomer' => 'New customer',
-        'newBill' => 'New Bill'
+        'generateBill' => 'Generate Bill'
     ]
 ];

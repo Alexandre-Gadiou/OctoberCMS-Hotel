@@ -9,6 +9,10 @@ fields:
     currency:
         label: algad.hotel::lang.bill.currency
         span: right
+    booking:
+        label: 'algad.hotel::lang.bill.booking'
+        nameFrom: id
+        type: relation
     is_paid:
         label: algad.hotel::lang.bill.is_paid
         type: switch

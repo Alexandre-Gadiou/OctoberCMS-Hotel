@@ -29,5 +29,12 @@ class Bill extends Model
      * @var string The database table used by the model.
      */
     public $table = 'algad_hotel_bills';
+    public $belongsTo = [
+        'booking' => [
+            'Algad\Hotel\Models\Booking',
+            'table' => 'algad_hotel_bookings',
+            'order' => 'id'
+        ]
+    ];
 
 }

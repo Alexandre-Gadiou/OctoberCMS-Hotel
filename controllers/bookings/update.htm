@@ -31,6 +31,9 @@
             data-load-indicator="Deleting Booking..."
             data-request-confirm="<?= e(trans('algad.hotel::lang.booking.delete_confirm')) ?>">
         </button>
+        <a class="btn btn-success" href="<?= Backend::url('algad/hotel/bills/create?bookingID='.$this->params[0]) ?>">
+            <?= e(trans('algad.hotel::lang.button.generateBill')) ?>
+        </a>
         <span class="btn-text">
             <a href="<?= Backend::url('algad/hotel/bookings') ?>">
                 <?= e(trans('algad.hotel::lang.button.cancel')) ?>
