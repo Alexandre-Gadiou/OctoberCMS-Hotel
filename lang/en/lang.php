@@ -17,6 +17,10 @@ return [
         'name' => 'Update account form',
         'description' => 'Update profile'
     ],
+    'abstractAccountForm' => [
+        'redirect_to' => 'Redirect URL',
+        'redirect_to_description' => 'URL location after submit form'
+    ],
     'customer' => [
         'firstname' => 'First Name',
         'lastname' => 'Last Name',

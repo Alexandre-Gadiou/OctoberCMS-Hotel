@@ -1,8 +1,10 @@
-<div class="algad-hotel form registration-form well">
-    
-    <form id="registration-form" data-request="onRegister" data-request-validate data-request-flash class="form-horizontal" role="form">
+{% set data_redirect_to = __SELF__.getRedirectTo() %}
 
-        <div class="form-group ">
+<div class="algad-hotel form registration-form well">
+
+    <form id="registration-form" data-request="onRegister" data-request-validate data-request-flash {{data_redirect_to|raw}} class="form-horizontal" role="form">
+
+          <div class="form-group ">
             <label for="name" class="col-sm-4 col-md-4 control-label">First Name</label>
             <div class="col-sm-8 col-md-8">
                 <input class="form-control" required="required" name="name" type="text">
@@ -38,7 +40,7 @@
                 <input class="form-control" required="required" name="password" type="password">
             </div>        
         </div>
-        
+
         <div class="form-group button-bar">
             <div class="col-xs-12">
                 <button type="reset" class="btn btn-default">Reset</button>

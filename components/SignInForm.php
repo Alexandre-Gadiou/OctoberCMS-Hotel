@@ -1,15 +1,29 @@
-<?php namespace Algad\Hotel\Components;
+<?php
 
-use RainLab\User\Components\Account as RAccount;
-use Exception;
+namespace Algad\Hotel\Components;
 
-class SignInForm extends RAccount
+use Algad\Hotel\Components\AbstractAccountForm;
+
+class SignInForm extends AbstractAccountForm
 {
+
     public function componentDetails()
     {
         return [
-            'name'        => 'algad.hotel::lang.signInForm.name',
+            'name' => 'algad.hotel::lang.signInForm.name',
             'description' => 'algad.hotel::lang.signInForm.description'
+        ];
+    }
+
+    public function defineProperties()
+    {
+        return [
+            'redirect_to' => [
+                'title' => 'algad.hotel::lang.abstractAccountForm.redirect_to',
+                'description' => 'algad.hotel::lang.abstractAccountForm.redirect_to_description',
+                'default' => '',
+                'type' => 'string'
+            ]
         ];
     }
 
