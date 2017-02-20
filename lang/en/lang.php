@@ -5,6 +5,10 @@ return [
         'name' => 'Hotel',
         'description' => 'room, customer, bill management system'
     ],
+    'absractForm' => [
+        'resultPage' => 'Redirect URL',
+        'resultPage_description' => 'URL location after submit form'
+    ],
     'signInForm' => [
         'name' => 'Sign In form',
         'description' => 'Login'
@@ -16,14 +20,6 @@ return [
     'updateAccountForm' => [
         'name' => 'Update account form',
         'description' => 'Update profile'
-    ],
-    'absractForm' => [
-        'resultPage' => 'Redirect URL',
-        'resultPage_description' => 'URL location after submit form'
-    ],
-    'abstractAccountForm' => [
-        'redirect_to' => 'Redirect URL',
-        'redirect_to_description' => 'URL location after submit form'
     ],
     'searchForm' => [
         'name' => 'Search form',
