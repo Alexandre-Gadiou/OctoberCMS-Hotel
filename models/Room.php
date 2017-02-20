@@ -24,6 +24,10 @@ class Room extends Model
      */
     public $rules = [
     ];
+    public $translatable = [
+        'title',
+        'description'
+    ];
 
     /**
      * @var string The database table used by the model.

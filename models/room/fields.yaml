@@ -9,6 +9,10 @@ fields:
         label: algad.hotel::lang.room.number
     nightly_price:
         label: algad.hotel::lang.room.nightly_price
+    description:
+            label: algad.hotel::lang.room.description
+            type: markdown
+            mode: split
     featured_images:
             label: algad.hotel::lang.room.featured_images
             type: fileupload
