@@ -32,11 +32,11 @@ class SearchResults extends AbstractForm
 
     public function getBookingLink($roomID)
     {
-        $bookingPage = $this->property("bookingPage");
+        $bookingFormPage = $this->property("resultPage");
         $checkin = Input::get('checkin');
         $checkout = Input::get('checkout');
 
-        return $bookingPage . '?checkin=' . $checkin . '&checkout=' . $checkout . "&roomID=" . $roomID;
+        return $bookingFormPage . '?checkin=' . $checkin . '&checkout=' . $checkout . "&roomID=" . $roomID;
     }
 
     public function getAvailableRooms()
