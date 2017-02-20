@@ -26,6 +26,10 @@ return [
         'description' => 'Booking search form',
         'resultPage' => 'Search results Page'
     ],
+    'searchResult' => [
+        'name' => 'Search results',
+        'description' => 'Display available rooms in function of search parameters',
+    ],
     'customer' => [
         'firstname' => 'First Name',
         'lastname' => 'Last Name',
