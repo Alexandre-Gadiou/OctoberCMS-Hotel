@@ -23,7 +23,7 @@ abstract class AbstractAccountForm extends RAccount
 
     public function getResultPageOptions()
     {
-        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
+        return ['' => '- none -'] + Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 
 }
