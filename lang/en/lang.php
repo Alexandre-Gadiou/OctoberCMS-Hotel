@@ -23,7 +23,8 @@ return [
     ],
     'searchForm' => [
         'name' => 'Search form',
-        'description' => 'Booking search form'
+        'description' => 'Booking search form',
+        'resultPage' => 'Search results Page'
     ],
     'customer' => [
         'firstname' => 'First Name',
@@ -40,8 +41,8 @@ return [
         'list_delete_confirm' => 'Do you really want to delete this room ?'
     ],
     'booking' => [
-        'date_in' => 'Arrival',
-        'date_out' => 'Departure',
+        'checkin' => 'Arrival',
+        'checkout' => 'Departure',
         'user' => 'User',
         'rooms' => 'Rooms',
         'created_at' => 'Created at',
