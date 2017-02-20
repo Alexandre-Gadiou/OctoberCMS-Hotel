@@ -46,7 +46,7 @@
                         <span class="nightly-price">{{ room.nightly_price }}</span> <span class="currency">€</span> {{ room.title }}
                     </div>
                     <div class="description">
-                        {{ room.description }}
+                        {{ room.description|raw }}
                     </div>
                 </a>
 
