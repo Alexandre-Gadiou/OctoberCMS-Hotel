@@ -36,6 +36,15 @@ class SearchResults extends ComponentBase
         return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 
+    public function getBookingLink($roomID)
+    {
+        $bookingPage = $this->property("bookingPage");
+        $checkin = Input::get('checkin');
+        $checkout = Input::get('checkout');
+
+        return $bookingPage . '?checkin=' . $checkin . '&checkout=' . $checkout . "&roomID=" . $roomID;
+    }
+
     public function getAvailableRooms()
     {
         $checkin = Input::get('checkin');

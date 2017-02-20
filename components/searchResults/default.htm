@@ -41,7 +41,7 @@
 
                 </div>
 
-                <a class="book-link" href="#book">
+                <a class="book-link" href="{{__SELF__.getBookingLink(room.id)|raw}}">
                     <div class="title">
                         <span class="nightly-price">{{ room.nightly_price }}</span> <span class="currency">€</span> {{ room.title }}
                     </div>
