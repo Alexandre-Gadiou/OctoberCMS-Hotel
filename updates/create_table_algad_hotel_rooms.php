@@ -18,6 +18,7 @@ class CreateTableAlgadHotelRooms extends Migration
             $table->string('number', 11)->nullable();
             $table->float('nightly_price')->nullable();
             $table->longText('description')->nullable();
+            $table->longText('description_html')->nullable();
             $table->boolean('is_available');
         });
     }

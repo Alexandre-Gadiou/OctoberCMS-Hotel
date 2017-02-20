@@ -3,6 +3,7 @@
 namespace Algad\Hotel\Models;
 
 use Model;
+use Markdown;
 
 /**
  * Model
@@ -40,5 +41,16 @@ class Room extends Model
         'featured_images' => ['System\Models\File', 'order' => 'sort_order'],
         'content_images' => ['System\Models\File']
     ];
+
+    public function beforeSave()
+    {
+        $this->description_html = self::formatHtml($this->description);
+    }
+
+    public static function formatHtml($input, $preview = false)
+    {
+        $result = Markdown::parse(trim($input));
+        return $result;
+    }
 
 }
