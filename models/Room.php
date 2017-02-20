@@ -32,5 +32,9 @@ class Room extends Model
     public $hasMany = [
         'booking' => 'Algad\Hotel\Models\Booking'
     ];
+    public $attachMany = [
+        'featured_images' => ['System\Models\File', 'order' => 'sort_order'],
+        'content_images' => ['System\Models\File']
+    ];
 
 }

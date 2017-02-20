@@ -7,6 +7,12 @@ fields:
         label: algad.hotel::lang.room.title
     number:
         label: algad.hotel::lang.room.number
+    featured_images:
+            label: algad.hotel::lang.room.featured_images
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200
     is_available:
         label: algad.hotel::lang.room.is_available
         type: switch
