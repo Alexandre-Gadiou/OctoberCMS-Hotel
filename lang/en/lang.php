@@ -41,6 +41,7 @@ return [
     'room' => [
         'title' => 'Title',
         'number' => 'Number',
+        'nightly_price' => 'Price (per night)',
         'featured_images' => 'Photos',
         'is_available' => 'Available',
         'list_delete_confirm' => 'Do you really want to delete this room ?'
