@@ -7,6 +7,8 @@ fields:
         label: algad.hotel::lang.room.title
     number:
         label: algad.hotel::lang.room.number
+    nightly_price:
+        label: algad.hotel::lang.room.nightly_price
     featured_images:
             label: algad.hotel::lang.room.featured_images
             type: fileupload
