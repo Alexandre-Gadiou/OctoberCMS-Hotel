@@ -6,7 +6,7 @@ use Cms\Classes\ComponentBase;
 use Input;
 use Algad\Hotel\Models\Room;
 
-class SearchResult extends ComponentBase
+class SearchResults extends ComponentBase
 {
 
     public $searchTerm;
