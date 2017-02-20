@@ -3,6 +3,7 @@
 namespace Algad\Hotel\Components;
 
 use Cms\Classes\ComponentBase;
+use Cms\Classes\Page;
 use Input;
 use Algad\Hotel\Models\Room;
 
@@ -22,7 +23,17 @@ class SearchResults extends ComponentBase
     public function defineProperties()
     {
         return [
+            'bookingPage' => [
+                'title' => 'algad.hotel::lang.searchResult.bookingPage',
+                'type' => 'dropdown',
+                'default' => ''
+            ],
         ];
+    }
+
+    public function getBookingPageOptions()
+    {
+        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 
     public function getAvailableRooms()
