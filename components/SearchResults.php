@@ -6,11 +6,10 @@ use Cms\Classes\ComponentBase;
 use Cms\Classes\Page;
 use Input;
 use Algad\Hotel\Models\Room;
+use Algad\Hotel\Components\AbstractForm;
 
-class SearchResults extends ComponentBase
+class SearchResults extends AbstractForm
 {
-
-    public $searchTerm;
 
     public function componentDetails()
     {
@@ -23,17 +22,12 @@ class SearchResults extends ComponentBase
     public function defineProperties()
     {
         return [
-            'bookingPage' => [
-                'title' => 'algad.hotel::lang.searchResult.bookingPage',
+            'resultPage' => [
+                'title' => 'algad.hotel::lang.searchResult.resultPage',
                 'type' => 'dropdown',
                 'default' => ''
             ],
         ];
-    }
-
-    public function getBookingPageOptions()
-    {
-        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 
     public function getBookingLink($roomID)

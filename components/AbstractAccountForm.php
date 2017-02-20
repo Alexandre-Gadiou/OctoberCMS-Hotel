@@ -8,7 +8,7 @@ use Cms\Classes\Page;
 abstract class AbstractAccountForm extends RAccount
 {
 
-    public function getResultPage()
+    public function getDataResultPage()
     {
         $prop = $this->property('resultPage');
         $page = Page::find($prop);

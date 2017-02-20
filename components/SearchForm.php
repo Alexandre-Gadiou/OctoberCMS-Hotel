@@ -2,10 +2,9 @@
 
 namespace Algad\Hotel\Components;
 
-use Cms\Classes\ComponentBase;
-use Cms\Classes\Page;
+use Algad\Hotel\Components\AbstractForm;
 
-class SearchForm extends ComponentBase
+class SearchForm extends AbstractForm
 {
 
     public function componentDetails()
@@ -23,13 +22,8 @@ class SearchForm extends ComponentBase
                 'title' => 'algad.hotel::lang.searchForm.resultPage',
                 'type' => 'dropdown',
                 'default' => ''
-            ],
+            ]
         ];
-    }
-
-    public function getResultPageOptions()
-    {
-        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 
 }
