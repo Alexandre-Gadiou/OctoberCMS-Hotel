@@ -1,11 +1,11 @@
 fields:
-    date_in:
-        label: 'algad.hotel::lang.booking.date_in'
+    checkin:
+        label: 'algad.hotel::lang.booking.checkin'
         type: datepicker
         mode: date
         span: left
-    date_out:
-        label: 'algad.hotel::lang.booking.date_out'
+    checkout:
+        label: 'algad.hotel::lang.booking.checkout'
         type: datepicker
         mode: date
         span: right
