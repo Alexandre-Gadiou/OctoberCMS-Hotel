@@ -1,15 +1,58 @@
 {% set rooms = __SELF__.getAvailableRooms() %}
 
-<div class="algad-hotel form search-results">
+<ul class="algad-hotel form search-results">
+    {% for room in rooms %}
+    <li>
 
-    <ul>
-        {% for room in rooms %}
-        <li>
-            {{ room.title }}
-        </li>
-        {% else %}
-        <li class="no-data">No room available</li>
-        {% endfor %}
-    </ul>
+        <div class="algad-hotel room list">
 
-</div>
+            <div class="photos">
+
+                <div id="player{{loop.index}}" class="carousel" data-ride="carousel" itemscope itemtype="http://schema.org/ImageGallery">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+
+
+                        {% for img in room.featured_images %}
+
+                        {% if loop.first %}
+                        <div class="item active" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
+                            <img itemprop="contentUrl" src="{{img.path}}" alt="{{img.name}}">
+                        </div>
+                        {% else %}
+                        <div class="item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" >
+                            <img itemprop="contentUrl" src="{{img.path}}" alt="{{img.name}}">
+                        </div>
+                        {% endif %}
+
+                        {% endfor %}
+
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#player{{loop.index}}" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#player{{loop.index}}" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+
+                    </div> <!-- Carousel -->
+
+                </div>
+
+                <a class="book-link" href="#book">
+                    <div class="title">
+                        <span class="nightly-price">{{ room.nightly_price }}</span> <span class="currency">€</span> {{ room.title }}
+                    </div>
+                    <div class="description">
+                        {{ room.description }}
+                    </div>
+                </a>
+
+            </div>
+    </li>
+    {% else %}
+    <li class="no-data">No room available</li>
+    {% endfor %}
+</ul>
