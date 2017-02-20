@@ -1,0 +1,16 @@
+{% set data_redirect_to = __SELF__.getResultPage() %}
+
+<div class="algad-hotel form booking-form well">
+
+    <form class="form-horizontal" role="form" data-request="onBook" data-request-validate data-request-flash {{data_redirect_to|raw}} >
+          Book now form
+
+          <div class="form-group button-bar">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-primary">Book</button>
+            </div>
+        </div>
+
+    </form>   
+
+</div>

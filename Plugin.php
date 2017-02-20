@@ -17,7 +17,8 @@ class Plugin extends PluginBase
             'Algad\Hotel\Components\RegistrationForm' => 'registrationForm',
             'Algad\Hotel\Components\UpdateAccountForm' => 'updateAccountForm',
             'Algad\Hotel\Components\SearchForm' => 'searchForm',
-            'Algad\Hotel\Components\SearchResults' => 'searchResults'
+            'Algad\Hotel\Components\SearchResults' => 'searchResults',
+            'Algad\Hotel\Components\BookingForm' => 'bookingForm',
         ];
     }
 

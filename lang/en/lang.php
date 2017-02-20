@@ -17,6 +17,10 @@ return [
         'name' => 'Update account form',
         'description' => 'Update profile'
     ],
+    'absractForm' => [
+        'resultPage' => 'Redirect URL',
+        'resultPage_description' => 'URL location after submit form'
+    ],
     'abstractAccountForm' => [
         'redirect_to' => 'Redirect URL',
         'redirect_to_description' => 'URL location after submit form'
@@ -30,6 +34,10 @@ return [
         'name' => 'Search results',
         'description' => 'Display available rooms in function of search parameters',
         'bookingPage' => 'Booking page'
+    ],
+    'bookingForm' => [
+        'name' => 'Booking form',
+        'description' => 'Display a form to book a room',
     ],
     'customer' => [
         'firstname' => 'First Name',
