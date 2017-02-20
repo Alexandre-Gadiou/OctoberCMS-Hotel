@@ -23,7 +23,7 @@ class SearchResults extends AbstractForm
     {
         return [
             'resultPage' => [
-                'title' => 'algad.hotel::lang.searchResult.resultPage',
+                'title' => 'algad.hotel::lang.abstractForm.resultPage',
                 'type' => 'dropdown',
                 'default' => ''
             ],

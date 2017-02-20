@@ -5,7 +5,7 @@ return [
         'name' => 'Hotel',
         'description' => 'room, customer, bill management system'
     ],
-    'absractForm' => [
+    'abstractForm' => [
         'resultPage' => 'Redirect URL',
         'resultPage_description' => 'URL location after submit form'
     ],

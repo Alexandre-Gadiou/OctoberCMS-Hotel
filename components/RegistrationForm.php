@@ -19,8 +19,8 @@ class RegistrationForm extends AbstractAccountForm
     {
         return [
             'resultPage' => [
-                'title' => 'algad.hotel::lang.absractForm.resultPage',
-                'description' => 'algad.hotel::lang.absractForm.resultPage_description',
+                'title' => 'algad.hotel::lang.abstractForm.resultPage',
+                'description' => 'algad.hotel::lang.abstractForm.resultPage_description',
                 'type' => 'dropdown',
                 'default' => ''
             ]
