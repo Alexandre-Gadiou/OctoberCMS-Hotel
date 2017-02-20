@@ -3,19 +3,27 @@
 namespace Algad\Hotel\Components;
 
 use RainLab\User\Components\Account as RAccount;
+use Cms\Classes\Page;
 
 abstract class AbstractAccountForm extends RAccount
 {
 
-    public function getRedirectTo()
+    public function getResultPage()
     {
-        $url = $this->property('redirect_to');
-        $redirect_to = '';
+        $prop = $this->property('resultPage');
+        $page = Page::find($prop);
+        $url = $page->url;
+        $resultPage = '';
         if ($url != null && $url != '')
         {
-            $redirect_to = 'data-request-data="redirect:' . "'" . $url . "'" . '"';
+            $resultPage = 'data-request-data="redirect:' . "'" . $url . "'" . '"';
         }
-        return $redirect_to;
+        return $resultPage;
+    }
+
+    public function getResultPageOptions()
+    {
+        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 
 }
