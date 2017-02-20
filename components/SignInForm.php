@@ -18,11 +18,11 @@ class SignInForm extends AbstractAccountForm
     public function defineProperties()
     {
         return [
-            'redirect_to' => [
-                'title' => 'algad.hotel::lang.abstractAccountForm.redirect_to',
-                'description' => 'algad.hotel::lang.abstractAccountForm.redirect_to_description',
-                'default' => '',
-                'type' => 'string'
+            'resultPage' => [
+                'title' => 'algad.hotel::lang.abstractForm.resultPage',
+                'description' => 'algad.hotel::lang.abstractForm.resultPage_description',
+                'type' => 'dropdown',
+                'default' => ''
             ]
         ];
     }

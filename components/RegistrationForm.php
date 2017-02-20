@@ -18,11 +18,11 @@ class RegistrationForm extends AbstractAccountForm
     public function defineProperties()
     {
         return [
-            'redirect_to' => [
-                'title' => 'algad.hotel::lang.abstractAccountForm.redirect_to',
-                'description' => 'algad.hotel::lang.abstractAccountForm.redirect_to_description',
-                'default' => '',
-                'type' => 'string'
+            'resultPage' => [
+                'title' => 'algad.hotel::lang.absractForm.resultPage',
+                'description' => 'algad.hotel::lang.absractForm.resultPage_description',
+                'type' => 'dropdown',
+                'default' => ''
             ]
         ];
     }
