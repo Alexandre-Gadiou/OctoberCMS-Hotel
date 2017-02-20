@@ -15,7 +15,8 @@ class Plugin extends PluginBase
         return [
             'Algad\Hotel\Components\SignInForm' => 'signInForm',
             'Algad\Hotel\Components\RegistrationForm' => 'registrationForm',
-            'Algad\Hotel\Components\UpdateAccountForm' => 'updateAccountForm'
+            'Algad\Hotel\Components\UpdateAccountForm' => 'updateAccountForm',
+            'Algad\Hotel\Components\SearchForm' => 'searchForm'
         ];
     }
 

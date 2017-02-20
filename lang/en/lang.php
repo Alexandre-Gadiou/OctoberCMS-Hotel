@@ -21,6 +21,10 @@ return [
         'redirect_to' => 'Redirect URL',
         'redirect_to_description' => 'URL location after submit form'
     ],
+    'searchForm' => [
+        'name' => 'Search form',
+        'description' => 'Booking search form'
+    ],
     'customer' => [
         'firstname' => 'First Name',
         'lastname' => 'Last Name',
