@@ -39,6 +39,7 @@ return [
         'firstname' => 'First Name',
         'lastname' => 'Last Name',
         'email' => 'Email',
+        'dateOfBirth' => 'Date of birth',
         'password' => 'Password',
         'password_confirmation' => 'Confirm password',
         'list_delete_confirm' => 'Do you really want to delete this customer ?'
