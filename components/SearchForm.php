@@ -18,8 +18,8 @@ class SearchForm extends AbstractForm
     public function defineProperties()
     {
         return [
-            'resultPage' => [
-                'title' => 'algad.hotel::lang.searchForm.resultPage',
+            'redirect' => [
+                'title' => 'algad.hotel::lang.searchForm.redirect',
                 'type' => 'dropdown',
                 'default' => ''
             ]

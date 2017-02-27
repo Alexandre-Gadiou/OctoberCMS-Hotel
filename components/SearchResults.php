@@ -22,8 +22,8 @@ class SearchResults extends AbstractForm
     public function defineProperties()
     {
         return [
-            'resultPage' => [
-                'title' => 'algad.hotel::lang.abstractForm.resultPage',
+            'redirect' => [
+                'title' => 'algad.hotel::lang.searchResult.redirect',
                 'type' => 'dropdown',
                 'default' => ''
             ],
@@ -32,7 +32,7 @@ class SearchResults extends AbstractForm
 
     public function getBookingLink($roomID)
     {
-        $bookingFormPage = $this->property("resultPage");
+        $bookingFormPage = $this->property("redirect");
         $checkin = Input::get('checkin');
         $checkout = Input::get('checkout');
 

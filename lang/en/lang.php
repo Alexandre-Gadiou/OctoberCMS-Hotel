@@ -6,8 +6,8 @@ return [
         'description' => 'room, customer, bill management system'
     ],
     'abstractForm' => [
-        'resultPage' => 'Redirect URL',
-        'resultPage_description' => 'URL location after submit form'
+        'redirect' => 'Redirect URL',
+        'redirect_description' => 'URL location after submit form'
     ],
     'signInForm' => [
         'name' => 'Sign In form',
@@ -24,12 +24,12 @@ return [
     'searchForm' => [
         'name' => 'Search form',
         'description' => 'Booking search form',
-        'resultPage' => 'Search results Page'
+        'redirect' => 'Search results Page'
     ],
     'searchResult' => [
         'name' => 'Search results',
         'description' => 'Display available rooms in function of search parameters',
-        'bookingPage' => 'Booking page'
+        'redirect' => 'Booking page'
     ],
     'bookingForm' => [
         'name' => 'Booking form',

@@ -8,20 +8,20 @@ use Cms\Classes\Page;
 abstract class AbstractAccountForm extends RAccount
 {
 
-    public function getDataResultPage()
+    public function getDataRedirect()
     {
-        $prop = $this->property('resultPage');
+        $prop = $this->property('redirect');
         $page = Page::find($prop);
         $url = $page->url;
-        $resultPage = '';
+        $redirectPage = '';
         if ($url != null && $url != '')
         {
-            $resultPage = 'data-request-data="redirect:' . "'" . $url . "'" . '"';
+            $redirectPage = 'data-request-data="redirect:' . "'" . $url . "'" . '"';
         }
-        return $resultPage;
+        return $redirectPage;
     }
 
-    public function getResultPageOptions()
+    public function getRedirectOptions()
     {
         return ['' => '- none -'] + Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }

@@ -18,9 +18,9 @@ class BookingForm extends AbstractForm
     public function defineProperties()
     {
         return [
-            'resultPage' => [
-                'title' => 'algad.hotel::lang.abstractForm.resultPage',
-                'description' => 'algad.hotel::lang.abstractForm.resultPage_description',
+            'redirect' => [
+                'title' => 'algad.hotel::lang.abstractForm.redirect',
+                'description' => 'algad.hotel::lang.abstractForm.redirect_description',
                 'type' => 'dropdown',
                 'default' => ''
             ],
