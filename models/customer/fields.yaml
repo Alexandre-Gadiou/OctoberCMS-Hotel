@@ -9,6 +9,12 @@ fields:
         label: algad.hotel::lang.customer.lastname
     email:
         label: algad.hotel::lang.customer.email
+        span : left
+    dateOfBirth:
+        label: algad.hotel::lang.customer.dateOfBirth
+        type: datepicker
+        mode: date
+        span: right
     password:
         label: algad.hotel::lang.customer.password
         type: password
