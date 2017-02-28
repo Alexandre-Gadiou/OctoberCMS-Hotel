@@ -9,6 +9,11 @@ columns:
     checkout:
         label: algad.hotel::lang.booking.checkout
         searchable: true
+    user_id:
+        label: algad.hotel::lang.customer.email
+        relation: user
+        select: email
+        searchable: true
     created_at:
         label: algad.hotel::lang.booking.created_at
         searchable: true
