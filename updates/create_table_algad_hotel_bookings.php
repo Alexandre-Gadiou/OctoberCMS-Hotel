@@ -14,8 +14,8 @@ class CreateTableAlgadHotelBookings extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->timestamp('checkin');
-            $table->timestamp('checkout');
+            $table->date('checkin');
+            $table->date('checkout');
             $table->integer('user_id');
             $table->integer('room_id');
             $table->timestamps();

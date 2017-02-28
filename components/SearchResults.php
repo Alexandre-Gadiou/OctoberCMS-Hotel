@@ -4,9 +4,9 @@ namespace Algad\Hotel\Components;
 
 use Cms\Classes\ComponentBase;
 use Cms\Classes\Page;
-use Input;
-use Algad\Hotel\Models\Room;
+use Illuminate\Support\Facades\DB;
 use Algad\Hotel\Components\AbstractForm;
+use Algad\Hotel\Models\Room;
 
 class SearchResults extends AbstractForm
 {
@@ -33,18 +33,25 @@ class SearchResults extends AbstractForm
     public function getBookingLink($room_id)
     {
         $bookingFormPage = $this->property("redirect");
-        $checkin = Input::get('checkin');
-        $checkout = Input::get('checkout');
+
+        // Get url parameters
+        $data = get();
+        $checkin = $data['checkin'];
+        $checkout = $data['checkout'];
 
         return $bookingFormPage . '?checkin=' . $checkin . '&checkout=' . $checkout . "&room_id=" . $room_id;
     }
 
     public function getAvailableRooms()
     {
-        $checkin = Input::get('checkin');
-        $checkout = Input::get('checkout');
+        // Get url parameters
+        $data = get();
+        $checkin = $data['checkin'];
+        $checkout = $data['checkout'];
 
-        $result = Room::get();
+        $ids = Db::select("SELECT id FROM algad_hotel_rooms r WHERE r.id NOT IN( SELECT b.room_id FROM algad_hotel_bookings b where not (b.checkout <= '" . $checkin . "' OR b.checkin >= '" . $checkout . "') )");
+        $ids = array_column($ids, 'id');
+        $result = Room::whereIn('id', $ids)->get();
 
         return $result;
     }
