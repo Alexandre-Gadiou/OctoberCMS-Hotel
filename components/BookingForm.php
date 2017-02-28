@@ -60,9 +60,13 @@ class BookingForm extends AbstractForm
 
         $room = Room::where('id', $room_id)->first();
 
-        if (!($room != null && $room['is_available']))
+        if ($room == null)
         {
-            Flash::error("Registration failed : room is not yet available");
+            Flash::error("Booking failed : room not found");
+        }
+        else if (!$room['is_available'])
+        {
+            Flash::error("Booking failed : room is not yet available");
         }
         else
         {
@@ -79,7 +83,7 @@ class BookingForm extends AbstractForm
 
             Event::fire('algad.hotel.booking', [$booking, $data]);
 
-            Flash::success("Registration successfull");
+            Flash::success("Booking successfull");
         }
     }
 
