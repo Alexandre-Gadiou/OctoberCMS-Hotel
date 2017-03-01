@@ -62,7 +62,6 @@ return [
         'adults' => 'Adults',
         'children' => 'Children',
         'reserved' => 'Reserved',
-        'active' => 'Active',
         'created_at' => 'Created at',
         'updated_at' => 'Updated at',
         'list_delete_confirm' => 'Do you really want to delete this booking ?'

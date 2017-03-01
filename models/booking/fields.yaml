@@ -29,8 +29,3 @@ fields:
         label: algad.hotel::lang.booking.reserved
         span: left
         type: switch
-    active:
-        label: algad.hotel::lang.booking.active
-        span: right
-        type: switch
-
