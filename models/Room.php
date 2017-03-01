@@ -24,6 +24,10 @@ class Room extends Model
      * Validation
      */
     public $rules = [
+        'title' => 'required|alpha',
+        'number' => 'required|numeric',
+        'capacity' => 'required|integer',
+        'nightly_price' => 'required|numeric',
     ];
     public $translatable = [
         'title',
