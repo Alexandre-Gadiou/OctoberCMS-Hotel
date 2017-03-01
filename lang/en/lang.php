@@ -47,6 +47,7 @@ return [
     'room' => [
         'title' => 'Title',
         'number' => 'Number',
+        'capacity' => 'Capacity',
         'nightly_price' => 'Price (per night)',
         'description' => 'Description',
         'featured_images' => 'Photos',

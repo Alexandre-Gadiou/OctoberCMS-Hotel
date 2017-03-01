@@ -9,3 +9,6 @@ columns:
     number:
         label: algad.hotel::lang.room.number
         searchable: true
+    capacity:
+        label: algad.hotel::lang.room.capacity
+        searchable: true

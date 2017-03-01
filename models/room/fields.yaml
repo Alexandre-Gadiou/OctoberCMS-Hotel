@@ -7,8 +7,12 @@ fields:
         label: algad.hotel::lang.room.title
     number:
         label: algad.hotel::lang.room.number
+    capacity:
+        label: algad.hotel::lang.room.capacity
+        span: left
     nightly_price:
         label: algad.hotel::lang.room.nightly_price
+        span: right
     description:
             label: algad.hotel::lang.room.description
             type: markdown
