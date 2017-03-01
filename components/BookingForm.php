@@ -8,7 +8,9 @@ use Input;
 use Algad\Hotel\Models\Booking;
 use Algad\Hotel\Models\Room;
 use Algad\Hotel\Models\Customer;
-use Event;
+use Algad\Hotel\Helpers\BookingHelper;
+use Algad\Hotel\Helpers\UrlHelper;
+use ApplicationException;
 use Auth;
 use Flash;
 
@@ -37,53 +39,18 @@ class BookingForm extends AbstractForm
 
     public function getURLParam($string)
     {
-        return $_GET[$string];
+        return UrlHelper::getUrlParameter($string);
     }
 
     public function onBook()
     {
-        $user = Auth::getUser();
-        if ($user == null)
+        try
         {
-            throw new ApplicationException("Try to book a room whithout beeing connected");
-        }
-
-        $data = post();
-
-        $checkin = $data['checkin'];
-        $checkout = $data['checkout'];
-        $room_id = $data['room_id'];
-        $user_id = $user->id;
-
-
-        Event::fire('algad.hotel.beforeBooking', [&$data]);
-
-        $room = Room::where('id', $room_id)->first();
-
-        if ($room == null)
-        {
-            Flash::error("Booking failed : room not found");
-        }
-        else if (!$room['is_available'])
-        {
-            Flash::error("Booking failed : room is not yet available");
-        }
-        else
-        {
-            $booking = new Booking();
-            $booking->checkin = $checkin;
-            $booking->checkout = $checkout;
-            $booking->room_id = $room_id;
-            $booking->user_id = $user_id;
-            $now = $booking->freshTimestamp();
-            $booking->created_at = $now;
-            $booking->updated_at = $now;
-            $booking->save();
-            $booking->rooms()->add($room);
-
-            Event::fire('algad.hotel.booking', [$booking, $data]);
-
+            BookingHelper::createBooking(post());
             Flash::success("Booking successfull");
+        } catch (Exception $ex)
+        {
+            throw new ApplicationException("Sorry an error occured during your booking");
         }
     }
 
