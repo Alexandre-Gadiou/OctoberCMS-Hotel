@@ -27,7 +27,6 @@ class Booking extends Model
         'checkout' => 'required|date',
         'adults' => 'required|integer',
         'children' => 'required|integer',
-        'user' => 'required',
         'rooms' => 'required',
     ];
 
