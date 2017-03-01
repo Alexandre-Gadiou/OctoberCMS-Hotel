@@ -9,6 +9,14 @@ fields:
         type: datepicker
         mode: date
         span: right
+    adults:
+        label: algad.hotel::lang.booking.adults
+        type: number
+        span: left
+    children:
+        label: algad.hotel::lang.booking.children
+        type: number
+        span: right
     user:
         label: 'algad.hotel::lang.booking.user'
         nameFrom: email

@@ -16,6 +16,8 @@ class CreateTableAlgadHotelBookings extends Migration
             $table->increments('id');
             $table->date('checkin');
             $table->date('checkout');
+            $table->integer('adults', 11);
+            $table->integer('children', 11);
             $table->integer('user_id');
             $table->timestamps();
         });

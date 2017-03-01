@@ -14,6 +14,12 @@ columns:
         relation: user
         select: email
         searchable: true
+    adults:
+        label: algad.hotel::lang.booking.adults
+        searchable: false
+    children:
+        label: algad.hotel::lang.booking.children
+        searchable: false
     created_at:
         label: algad.hotel::lang.booking.created_at
         searchable: true
