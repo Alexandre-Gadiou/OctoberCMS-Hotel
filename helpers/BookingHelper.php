@@ -17,8 +17,6 @@ use ApplicationException;
 class BookingHelper
 {
 
-    protected static $actionExists = null;
-
     public static function createBooking($data)
     {
         $user = Auth::getUser();
