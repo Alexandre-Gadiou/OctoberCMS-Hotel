@@ -18,6 +18,8 @@ class CreateTableAlgadHotelBookings extends Migration
             $table->date('checkout');
             $table->integer('adults', 11);
             $table->integer('children', 11);
+            $table->boolean('reserved');
+            $table->boolean('active');
             $table->integer('user_id');
             $table->timestamps();
         });
