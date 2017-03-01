@@ -23,6 +23,12 @@ class Booking extends Model
      * Validation
      */
     public $rules = [
+        'checkin' => 'required|date',
+        'checkout' => 'required|date',
+        'adults' => 'required|integer',
+        'children' => 'required|integer',
+        'user' => 'required',
+        'rooms' => 'required',
     ];
 
     /**
