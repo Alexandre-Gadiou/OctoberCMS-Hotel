@@ -26,41 +26,40 @@ class BookingHelper
         {
             throw new ApplicationException("Try to book a room whithout beeing connected");
         }
-        try
-        {
-            $data['rooms'] = BookingHelper::getRoomList($data['rooms']);
-            $data['user_id'] = $user->id;
+        
+        $data['rooms'] = BookingHelper::getRoomList($data);
+        $data['user_id'] = $user->id;
 
-            Event::fire('algad.hotel.beforeBooking', [&$data]);
+        Event::fire('algad.hotel.beforeBooking', [&$data]);
 
-            $booking = new Booking();
-            $booking->checkin = $data['checkin'];
-            $booking->checkout = $data['checkout'];
-            $booking->adults = $data['adults'];
-            $booking->children = $data['children'];
-            $booking->reserved = true;
-            $booking->user_id = $data['user_id'];
-            $now = $booking->freshTimestamp();
-            $booking->created_at = $now;
-            $booking->updated_at = $now;
-            $booking->rooms = $data['rooms'];
-            $booking->save();
+        $booking = new Booking();
+        $booking->checkin = $data['checkin'];
+        $booking->checkout = $data['checkout'];
+        $booking->adults = $data['adults'];
+        $booking->children = $data['children'];
+        $booking->reserved = true;
+        $booking->user_id = $data['user_id'];
+        $now = $booking->freshTimestamp();
+        $booking->created_at = $now;
+        $booking->updated_at = $now;
+        $booking->rooms = $data['rooms'];
+        $booking->save();
 
-            Event::fire('algad.hotel.booking', [$booking, $data]);
+        Event::fire('algad.hotel.booking', [$booking, $data]);
 
-            return $booking;
-        } catch (Exception $e)
-        {
-            throw new ApplicationException("An error occured during the booking");
-        }
+        return $booking;
+       
     }
 
-    private static function getRoomList($rooms)
+    private static function getRoomList($data)
     {
         $result = array();
-        if (!empty($rooms))
+        if (isset($data["room_id"]) && isset($data["rooms"]))
         {
-            $result = explode(",", $rooms);
+            $result = $data["rooms"].",".$data["room_id"];
+            $result = explode(",", $result);
+        }else {
+            $result = [$data["room_id"]];
         }
         return $result;
     }

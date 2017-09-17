@@ -1,6 +1,8 @@
 {% set data_redirect_to = __SELF__.getDataRedirect() %}
 {% set checkin = __SELF__.getURLParam('checkin') %}
 {% set checkout = __SELF__.getURLParam('checkout') %}
+{% set adults = __SELF__.getURLParam('adults') %}
+{% set children = __SELF__.getURLParam('children') %}
 {% set room_id = __SELF__.getURLParam('room_id') %}
 
 
@@ -17,6 +19,18 @@
             <label for="checkout" class="col-sm-4 col-md-4 control-label">Checkout : </label>
             <div class="col-sm-8 col-md-8">
                 <input  class="form-control" type="date" name="checkout" value="{{ checkout }}" readonly/>
+            </div>
+        </div>
+        <div class="form-group ">
+            <label for="checkout" class="col-sm-4 col-md-4 control-label">Adults : </label>
+            <div class="col-sm-8 col-md-8">
+                <input  class="form-control" type="text" name="adults" value="{{ adults }}" readonly/>
+            </div>
+        </div>
+        <div class="form-group ">
+            <label for="checkout" class="col-sm-4 col-md-4 control-label">Children : </label>
+            <div class="col-sm-8 col-md-8">
+                <input  class="form-control" type="text" name="children" value="{{ children }}" readonly/>
             </div>
         </div>
         <div class="form-group ">

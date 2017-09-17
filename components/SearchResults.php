@@ -7,6 +7,8 @@ use Cms\Classes\Page;
 use Illuminate\Support\Facades\DB;
 use Algad\Hotel\Components\AbstractForm;
 use Algad\Hotel\Models\Room;
+use Algad\Hotel\Helpers\RoomHelper;
+
 
 class SearchResults extends AbstractForm
 {
@@ -38,22 +40,20 @@ class SearchResults extends AbstractForm
         $data = get();
         $checkin = $data['checkin'];
         $checkout = $data['checkout'];
+        $adults = $data['adults'];
+        $children = $data['children'];
 
-        return $bookingFormPage . '?checkin=' . $checkin . '&checkout=' . $checkout . "&room_id=" . $room_id;
+        return $bookingFormPage . "?checkin=" . $checkin 
+        . "&checkout=" . $checkout
+        . "&adults=" . $adults
+        . "&children=" . $children
+        . "&room_id=" . $room_id;
     }
 
     public function getAvailableRooms()
     {
-        // Get url parameters
         $data = get();
-        $checkin = $data['checkin'];
-        $checkout = $data['checkout'];
-
-        $ids = Db::select("SELECT id FROM algad_hotel_rooms r WHERE r.id NOT IN( SELECT b.room_id FROM algad_hotel_bookings b where not (b.checkout <= '" . $checkin . "' OR b.checkin >= '" . $checkout . "') )");
-        $ids = array_column($ids, 'id');
-        $result = Room::whereIn('id', $ids)->get();
-
-        return $result;
+        return RoomHelper::getAvailableRooms($data['checkin'],$data['checkout']);
     }
 
 }
