@@ -24,7 +24,7 @@ class Room extends Model
      * Validation
      */
     public $rules = [
-        'title' => 'required|alpha',
+        'title' => 'required|string',
         'number' => 'required|numeric',
         'capacity' => 'required|integer',
         'nightly_price' => 'required|numeric',
